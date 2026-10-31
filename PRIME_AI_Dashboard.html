@@ -1,0 +1,114 @@
+<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PRIME AI — Five Market Observer</title><style>
+:root{
+--bg:#05070b;--panel:#0d121a;--panel2:#090e15;--line:#263342;
+--text:#edf4fb;--muted:#8fa2b8;--cyan:#36e0cf;--green:#42d6a0;
+--red:#ff6178;--amber:#e8b85d;--violet:#9b8cff;--blue:#5e9cff
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 12% 0%,#14212a 0%,#080c12 34%,#05070b 72%);color:var(--text);font:14px system-ui,Segoe UI,Arial,sans-serif}
+header{padding:18px 20px 10px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:linear-gradient(90deg,#080d13,#0b111a 55%,#090c13);border-bottom:1px solid #263342}
+.brand{font-size:24px;font-weight:850;letter-spacing:1px}.brand span{color:var(--cyan)}.sub{font-size:10px;color:var(--muted);letter-spacing:2px}
+.pill{border:1px solid #24645e;color:var(--cyan);background:#0b211f;border-radius:30px;padding:7px 12px;font-size:11px}
+nav{display:flex;gap:8px;padding:8px 20px 14px;overflow:auto;border-bottom:1px solid var(--line);background:#080d13}
+nav a{white-space:nowrap;text-decoration:none;color:#b9c8d8;border:1px solid #293849;border-radius:9px;padding:9px 13px;background:linear-gradient(180deg,#151e29,#0c121a)}
+nav a:hover{border-color:var(--cyan);color:#fff;background:#102421}
+main{padding:12px 16px 26px;max-width:1700px;margin:auto}
+.section-title{font-weight:800;letter-spacing:1.1px;margin:16px 0 8px;font-size:12px;color:#55dfd0;border-bottom:1px solid #1d3440;padding-bottom:6px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.card{background:linear-gradient(145deg,#101720,#080c12 78%);border:1px solid #253647;border-radius:10px;padding:10px;min-width:0;box-shadow:0 6px 18px #0009,inset 0 1px 0 #ffffff08}
+.metric{font-size:11px;color:#9db0c4;text-transform:uppercase;letter-spacing:1px}.value{font-size:25px;font-weight:800;margin:5px 0;color:#f0f6ff}.hint{font-size:11px;color:var(--muted);line-height:1.5}
+.status{display:inline-block;padding:4px 8px;border-radius:6px;background:#282319;color:var(--amber);font-size:10px;border:1px solid #5b4827}
+.widget{height:360px;border:0;width:100%;border-radius:9px;background:#070b11}
+.widget.tall{height:480px}.widget.small{height:300px}
+.two{display:grid;grid-template-columns:1.25fr 1fr;gap:12px}.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.note{border-left:3px solid var(--amber);padding:10px 12px;background:linear-gradient(90deg,#241d10,#15120d);color:#eadbb9;border-radius:5px;font-size:12px;line-height:1.55}
+.good{color:var(--green)}.bad{color:var(--red)}
+.tradingview-widget-container{background:#080d14!important;border:1px solid #263646;border-radius:10px;overflow:hidden;color-scheme:dark}
+.tradingview-widget-container__widget{background:#080d14!important}
+a{color:#54dfd0;text-decoration:none}a:hover{color:#e8b85d;text-decoration:underline}iframe{color-scheme:dark}
+footer{color:var(--muted);font-size:11px;text-align:center;padding:20px;border-top:1px solid #202c39}
+@media(max-width:950px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}.three{grid-template-columns:1fr}}
+@media(max-width:560px){header,main{padding-left:12px;padding-right:12px}.grid{grid-template-columns:1fr 1fr}.value{font-size:19px}.widget{height:330px}}
+
+.hero{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:14px 0}
+.instrument{background:linear-gradient(145deg,#111c28,#080d13);border:1px solid #294052;border-radius:12px;padding:12px;min-width:0}
+.instrument .name{font-size:11px;color:#9db0c4;letter-spacing:1px}.instrument .big{font-size:21px;font-weight:850;margin:7px 0}.instrument .subline{font-size:10px;color:#8fa2b8}
+.live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#42d6a0;margin-right:6px;box-shadow:0 0 8px #42d6a0}
+.chart-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.chart-card{min-width:0}
+.source-row{display:flex;gap:8px;flex-wrap:wrap}.source-chip{border:1px solid #2a4655;background:#0b171e;border-radius:8px;padding:8px 10px;color:#a9c9d2;font-size:11px}
+@media(max-width:900px){.hero{grid-template-columns:repeat(2,minmax(0,1fr))}.chart-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.hero{grid-template-columns:repeat(2,minmax(0,1fr))}.instrument .big{font-size:18px}}
+</style></head><body>
+<header><div><div class="brand">◉ <span>PRIME AI</span> / OBSERVER</div><div class="sub">GLOBAL DATA NETWORK · INDIA MARKET TERMINAL</div></div><div class="pill"><span class="live-dot"></span>5 MARKETS · SOURCE STATUS VISIBLE</div></header>
+<nav><a href="#pulse">Market Pulse</a><a href="#charts">Live Charts</a><a href="#sentiment">Public Sentiment</a><a href="#intel">Market Intelligence</a><a href="#sources">Data Sources</a></nav>
+<main>
+<div class="note"><b>ড্যাশবোর্ডের নির্দিষ্ট বাজার:</b> শুধু SENSEX, CRUDE OIL, NIFTY, BANK NIFTY এবং BITCOIN। আগের ডার্ক টার্মিনাল ডিজাইন রাখা হয়েছে; অপ্রয়োজনীয় Forex, Gold, Silver, Crypto altcoins ও অন্যান্য মার্কেট সেকশন বাদ। চার্ট TradingView-এর embedded market widgets থেকে আসে—এক্সচেঞ্জভেদে ডেটা delayed হতে পারে।</div>
+<div id="pulse" class="section-title">01 / FIVE-MARKET GLOBAL PULSE</div>
+<div class="hero">
+ <div class="instrument"><div class="name">SENSEX · BSE</div><div class="big">BSE:SENSEX</div><div class="subline">Chart feed · verify exchange entitlement</div></div>
+ <div class="instrument"><div class="name">CRUDE OIL</div><div class="big">MCX:CRUDEOIL</div><div class="subline">India futures symbol</div></div>
+ <div class="instrument"><div class="name">NIFTY 50 · NSE</div><div class="big">NSE:NIFTY</div><div class="subline">India benchmark index</div></div>
+ <div class="instrument"><div class="name">BANK NIFTY · NSE</div><div class="big">NSE:BANKNIFTY</div><div class="subline">Banking index</div></div>
+ <div class="instrument"><div class="name">BITCOIN · BTC/USDT</div><div class="big">BINANCE:BTCUSDT</div><div class="subline">24/7 crypto market</div></div>
+</div>
+<div class="section-title">GLOBAL TICKER · SELECTED SYMBOLS ONLY</div>
+<div class="card"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"BSE:SENSEX","title":"SENSEX"},{"proName":"MCX:CRUDEOIL1!","title":"CRUDE OIL"},{"proName":"NSE:NIFTY","title":"NIFTY"},{"proName":"NSE:BANKNIFTY","title":"BANK NIFTY"},{"proName":"BINANCE:BTCUSDT","title":"BITCOIN"}],"showSymbolLogo":true,"isTransparent":true,"displayMode":"adaptive","colorTheme":"dark","locale":"en"}</script></div></div>
+<div id="charts" class="section-title">02 / LIVE MARKET CHARTS</div>
+<div class="chart-grid">
+ <div class="card chart-card"><div class="metric">SENSEX · BSE</div><iframe class="widget tall" src="https://www.tradingview.com/widgetembed/?symbol=BSE%3ASENSEX&interval=15&hidesidetoolbar=0&symboledit=0&saveimage=0&theme=dark&style=1&timezone=Asia%2FKolkata" loading="lazy"></iframe></div>
+ <div class="card chart-card"><div class="metric">CRUDE OIL · MCX FUTURES</div><iframe class="widget tall" src="https://www.tradingview.com/widgetembed/?symbol=MCX%3ACRUDEOIL1%21&interval=15&hidesidetoolbar=0&symboledit=0&saveimage=0&theme=dark&style=1&timezone=Asia%2FKolkata" loading="lazy"></iframe></div>
+ <div class="card chart-card"><div class="metric">NIFTY 50 · NSE</div><iframe class="widget tall" src="https://www.tradingview.com/widgetembed/?symbol=NSE%3ANIFTY&interval=15&hidesidetoolbar=0&symboledit=0&saveimage=0&theme=dark&style=1&timezone=Asia%2FKolkata" loading="lazy"></iframe></div>
+ <div class="card chart-card"><div class="metric">BANK NIFTY · NSE</div><iframe class="widget tall" src="https://www.tradingview.com/widgetembed/?symbol=NSE%3ABANKNIFTY&interval=15&hidesidetoolbar=0&symboledit=0&saveimage=0&theme=dark&style=1&timezone=Asia%2FKolkata" loading="lazy"></iframe></div>
+ <div class="card chart-card"><div class="metric">BITCOIN · BINANCE BTC/USDT</div><iframe class="widget tall" src="https://www.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCUSDT&interval=15&hidesidetoolbar=0&symboledit=0&saveimage=0&theme=dark&style=1&timezone=Asia%2FKolkata" loading="lazy"></iframe></div>
+</div>
+
+<div id="sentiment" class="section-title">03 / INDIAN PUBLIC SENTIMENT INTELLIGENCE · NIFTY 500 WATCH</div>
+<div class="note"><b>এখানে কী দেখা হবে:</b> কোন ভারতীয় শেয়ার নিয়ে Reddit/X/financial news-এ আলোচনা বাড়ছে, আলোচনা Bullish না Bearish, এবং কোন খবর আলোচনাকে চালাচ্ছে। Public sentiment মানে জনমতের মাপ—এটি নিশ্চিত BUY/SELL সংকেত নয়।</div>
+<div class="grid" style="margin-top:10px">
+ <div class="card"><div class="metric">SOCIAL BUZZ</div><div class="value" id="psBuzz">WAITING</div><div class="hint">আলোচনার পরিমাণ ও পরিবর্তন</div></div>
+ <div class="card"><div class="metric">BULLISH MENTIONS</div><div class="value good" id="psBull">—</div><div class="hint">ইতিবাচক আলোচনার অংশ</div></div>
+ <div class="card"><div class="metric">BEARISH MENTIONS</div><div class="value bad" id="psBear">—</div><div class="hint">নেতিবাচক আলোচনার অংশ</div></div>
+ <div class="card"><div class="metric">DATA SOURCE STATUS</div><div class="value" id="psStatus">NOT CONNECTED</div><div class="hint" id="psUpdated">API key ছাড়া লাইভ sentiment আসবে না</div></div>
+</div>
+<div class="two" style="margin-top:10px">
+ <div class="card"><div class="metric">TRENDING STOCKS · PUBLIC DISCUSSION</div><div class="hint" style="margin:6px 0 10px">API থেকে পাওয়া ticker, buzz, mention ও sentiment এখানে দেখাবে।</div><div style="overflow:auto"><table style="width:100%;border-collapse:collapse;font-size:12px"><thead><tr style="color:#8fa2b8;text-align:left"><th style="padding:9px;border-bottom:1px solid #263342">STOCK</th><th style="padding:9px;border-bottom:1px solid #263342">BUZZ</th><th style="padding:9px;border-bottom:1px solid #263342">MENTIONS</th><th style="padding:9px;border-bottom:1px solid #263342">SENTIMENT</th></tr></thead><tbody id="psRows"><tr><td colspan="4" style="padding:12px;color:#8fa2b8">No verified sentiment data loaded.</td></tr></tbody></table></div></div>
+ <div class="card"><div class="metric">CONNECT PUBLIC SENTIMENT API</div><div class="hint" style="margin:6px 0 10px">Adanos-এর free plan-এ ২৫০ request/month, ১০০ request/minute ও ৩০ দিনের historical window রয়েছে। Free plan commercial use অনুমোদন করে না। নিজের ব্যক্তিগত গবেষণা/ট্রেডিং ব্যবহারের শর্ত আগে যাচাই করুন।</div><label for="adanosKey" class="hint">API KEY</label><input id="adanosKey" type="password" autocomplete="off" placeholder="Paste your Adanos API key" style="width:100%;margin:6px 0 9px;padding:10px;background:#070c12;border:1px solid #304253;border-radius:7px;color:#edf4fb"><div style="display:flex;gap:8px;flex-wrap:wrap"><button id="psConnect" style="padding:9px 12px;background:#123c38;color:#8af0dc;border:1px solid #287d70;border-radius:7px">CONNECT & LOAD</button><button id="psClear" style="padding:9px 12px;background:#171e29;color:#c5d1df;border:1px solid #344354;border-radius:7px">CLEAR KEY</button></div><div id="psMessage" class="hint" style="margin-top:10px">Key is used only for this browser session and is not saved by this page.</div><div class="hint" style="margin-top:10px">API documentation: <a href="https://adanos.org/pricing" target="_blank" rel="noopener">Adanos endpoints & free-tier terms</a></div></div>
+</div>
+<div class="note" style="margin-top:10px">সীমাবদ্ধতা: প্রথম সংযোগে Reddit-এর aggregate market sentiment endpoint ব্যবহার করা হবে। এতে API-র universe-এর সব ticker স্বয়ংক্রিয়ভাবে NIFTY 500 নয়। ভারতীয় ticker coverage ও browser CORS/API access সফল কি না পরীক্ষা করতে হবে। X/news source ও NIFTY 500 universe পরে আলাদা endpoint mapping দিয়ে যোগ হবে।</div>
+
+<div id="intel" class="section-title">04 / MARKET INTELLIGENCE STATUS</div>
+<div class="grid">
+ <div class="card"><div class="metric">DATA COLLECTION</div><div class="value">Widget-based</div><div class="hint">চার্ট ও টিকার TradingView embed থেকে লোড হয়। এই HTML নিজে ২৪ ঘণ্টা background collection চালায় না।</div></div>
+ <div class="card"><div class="metric">AI SIGNAL ENGINE</div><div class="value">STANDBY</div><div class="hint">যাচাইকৃত OHLCV feed ও backtested rules সংযুক্ত না হওয়া পর্যন্ত BUY/SELL/ENTRY/SL/TARGET দেখানো হবে না।</div></div>
+ <div class="card"><div class="metric">FRESHNESS</div><div class="value">Provider-dependent</div><div class="hint">প্রতিটি মার্কেটের live/delayed status TradingView ও সংশ্লিষ্ট exchange entitlement-এর উপর নির্ভরশীল।</div></div>
+ <div class="card"><div class="metric">BACKGROUND SERVER</div><div class="value">Not deployed</div><div class="hint">ট্যাব বন্ধ থাকলেও ডেটা সংগ্রহের জন্য পরে cloud backend/runner লাগবে।</div></div>
+</div>
+<div class="note" style="margin-top:12px"><b>গুরুত্বপূর্ণ:</b> পাঁচটি চার্ট দেখানো মানেই পাঁচটি official free API connected নয়। বিশেষ করে NSE/BSE/MCX real-time data-র ক্ষেত্রে exchange permissions ও subscription rules থাকতে পারে। TradingView symbol unavailable দেখালে ওই exchange/symbol-এর embed entitlement বা symbol mapping যাচাই করতে হবে।</div>
+<div id="sources" class="section-title">05 / SOURCE CONNECTIONS</div>
+<div class="source-row"><div class="source-chip">BSE · <a href="https://www.bseindia.com/" target="_blank">Official</a></div><div class="source-chip">NSE · <a href="https://www.nseindia.com/" target="_blank">Official</a></div><div class="source-chip">MCX · <a href="https://www.mcxindia.com/" target="_blank">Official</a></div><div class="source-chip">Binance · <a href="https://developers.binance.com/docs/binance-spot-api-docs" target="_blank">Public market API docs</a></div><div class="source-chip">TradingView · <a href="https://www.tradingview.com/" target="_blank">Embedded charts</a></div></div>
+<div class="card" style="margin-top:12px"><div class="metric">NEXT ENGINE PHASE</div><div class="value">Verified data → database → analysis</div><div class="hint">পরবর্তী বাস্তব কাজ: অনুমোদিত API/CSV data connector, timestamp ও source validation, storage এবং পাঁচটি instrument-এর জন্য আলাদা trend/volatility analysis।</div></div>
+</main><footer>PRIME AI OBSERVER · FIVE SELECTED MARKETS · DATA STATUS DISCLOSED</footer>
+<script>
+(()=>{
+ const $=id=>document.getElementById(id);
+ const keyInput=$('adanosKey'), status=$('psStatus'), msg=$('psMessage');
+ function setStatus(t){status.textContent=t;}
+ $('psClear').addEventListener('click',()=>{keyInput.value='';setStatus('NOT CONNECTED');msg.textContent='API key cleared from this page.';$('psRows').innerHTML='<tr><td colspan="4" style="padding:12px;color:#8fa2b8">No verified sentiment data loaded.</td></tr>';});
+ $('psConnect').addEventListener('click',async()=>{
+  const key=keyInput.value.trim(); if(!key){msg.textContent='আগে Adanos API key দিন।';return;}
+  setStatus('CONNECTING');msg.textContent='Requesting public Reddit stock market sentiment…';
+  try{
+   const r=await fetch('https://api.adanos.org/reddit/stocks/v1/market-sentiment',{headers:{'X-API-Key':key,'Accept':'application/json'}});
+   if(!r.ok) throw new Error('HTTP '+r.status+' — API key, quota, endpoint access বা CORS পরীক্ষা করুন।');
+   const d=await r.json();
+   const pct=v=>Number.isFinite(Number(v))?Number(v).toFixed(1)+'%':'—';
+   $('psBuzz').textContent=d.buzz_score??'—';$('psBull').textContent=pct(d.bullish_pct);$('psBear').textContent=pct(d.bearish_pct);
+   const drivers=Array.isArray(d.drivers)?d.drivers:[];
+   $('psRows').innerHTML=drivers.length?drivers.map(x=>`<tr><td style="padding:9px;border-bottom:1px solid #1d2a36">${String(x.ticker??'—').replace(/[<>]/g,'')}</td><td style="padding:9px;border-bottom:1px solid #1d2a36">${x.buzz_score??'—'}</td><td style="padding:9px;border-bottom:1px solid #1d2a36">${x.mentions??'—'}</td><td style="padding:9px;border-bottom:1px solid #1d2a36">${x.sentiment_score??'—'}</td></tr>`).join(''):'<tr><td colspan="4" style="padding:12px">API connected; no driver rows returned.</td></tr>';
+   setStatus('CONNECTED');$('psUpdated').textContent='Updated: '+new Date().toLocaleString();msg.textContent='ডেটা API থেকে এসেছে। API-এর coverage ও timestamp অনুযায়ী ব্যাখ্যা করুন; এটি NIFTY 500 completeness নিশ্চিত করে না।';
+  }catch(e){setStatus('CONNECTION FAILED');msg.textContent=e.message+' — Browser CORS বাধা থাকলে secure backend proxy লাগবে।';}
+ });
+})();
+</script>
+</body></html>
